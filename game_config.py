@@ -17,12 +17,9 @@ def game(switcher):
 
     host_door.remove(player_initial_choice)
 
-    #remove the car door
-
-    if car_door == host_door[0]:
-        host_door.remove(host_door[0])
-    elif car_door == host_door[1]:
-        host_door.remove(host_door[1])
+    #remove the car_door
+    if (car_door in host_door[0]):
+        host_door.remove(car_door)
     else:
         host_door.remove(random.choice(host_door))
 
